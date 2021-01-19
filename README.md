@@ -4,5 +4,4 @@ Library for Python 3
 
 This was created to simplify experiment data analyze
 
-Something what looks like documentation 
-You can find in *descripion.txt*
+Documentation can be found in *descripion.txt*
