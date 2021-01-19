@@ -1,0 +1,56 @@
+# Class Experiment_data
+
+This objects of this class has 3 fields (value, abolute error, relative error)
+
+# Function get_data(road_to_file, colomn_with_x, colomn_with_y, start_line, finish_line, sheet_number=0)
+
+This function needs a few paraments:
+    1. road_to_file  - road to Excel file, which consist data
+    2. colomn_with_x - colomn with independent variable
+    3. colomn_with_y - colomn with dependent variable
+    4. start_line    - line from which you want to start read data
+    5. finish_line   - line on which  you want to finish read data
+    6. sheet_number  - number of sheet with data, which you want to read !!! Default - 0 !!!
+
+And as answer this one returns:
+    1. x_list - array with independent variable
+    2. y_list - array with dependent variable
+    3. name   - name of file (!!! without format !!!)
+
+# Function error(x, y, system_error)
+
+This function get 3 parametrs:
+    1. x - array with independent variable
+    2. y - array with dependent variable
+    3. system_error - system error in your's experiment
+
+And as answer this one returns:
+    1. x - array with independent variable
+    2. y - array with dependent variable
+
+    !!! Both arrays consist data in Experiment_data type !!!
+    This mean, that each object of those arrays has 3 fields ( value, absolute error, relative error )
+
+# Function MSL(x,y)
+
+This is function of Method of Less Square
+
+This function get 2 parametrs:
+    1. x - array with independent variable
+    2. y - array with dependent variable
+
+Based on this data this function returns:
+    1. result - the function which is best describes the dependence between data
+    2. draw_data - array which consist pars (x;y), which could be used in plot function
+        a. draw_data[0] = function ( format of this is str )
+        b. draw_data[1] = array[ [x_list], [y_list] ]
+
+# Function plot_f(x, y, draw_data, function, name, road='./pictures')
+
+This function get:
+    1. x - array with data from experiment
+    2. y - array with data from experiment
+    3. draw_data - data for plot function
+    4. function - name of function we drawing ( we got this from MSL() )
+    5. name - name how you want to call the graphics
+    6. road - location on your computer to save graphics ( Default - )
